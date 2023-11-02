@@ -5,7 +5,7 @@ const apiUrl = `https://api.cricapi.com/v1/currentMatches?apikey=${apiKey}&offse
 // Function to format team information
 function formatTeamInfo(match) {
   return `
-    <p>Teams: <b>${match.teams[1]}</b> vs <b>${match.teams[0]}</b></p>
+    <p>Teams: <b>${match.teams[0]}</b> vs <b>${match.teams[1]}</b></p>
   `;
 }
 
@@ -14,11 +14,11 @@ function formatLiveScore(match) {
   return `
     <p><b>Live Score:</b>
       <ul>
-        <li>${match.teams[1]}: ${match.score[0].r}/${match.score[0].w} in ${match.score[0].o} overs</li>
-        <li>${match.teams[0]}: ${match.score[1].r}/${match.score[1].w} in ${match.score[1].o} overs</li>
+        <li>${match.teams[0]}: ${match.score[0].r}/${match.score[0].w} in ${match.score[0].o} overs</li>
+        <li>${match.teams[1]}: ${match.score[1].r}/${match.score[1].w} in ${match.score[1].o} overs</li>
       </ul>
     </p>
-    <p>Currently Playing: <b>${match.teams[0]}</b></p>
+    <p>Currently Playing: <b>${match.teams[1]}</b></p>
     <p>Status: <b>${match.status}</b></p>
   `;
 }
